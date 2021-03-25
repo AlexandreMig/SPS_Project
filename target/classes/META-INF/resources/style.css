@@ -1,37 +1,37 @@
 .cb-slideshow,
 .cb-slideshow:after { 
+    background-color: black;
+    height: 100%;
+    left: 0px;
     margin: 0;
     position: fixed;
-    width: 100%;
-    height: 100%;
     top: 0px;
-    left: 0px;
+    width: 100%;
     z-index: 0; 
-    background-color: black;
 }
 .cb-slideshow:after { 
-    content: ''; 
     background: transparent url(../images/opacity.png) repeat top left; 
+    content: ''; 
     opacity: 80%;
 }
 
-.cb-slideshow li{ 
+.cb-slideshow li { 
     list-style-type: none;
 }
 
 .cb-slideshow li span { 
-    width: 100%;
+    animation: imageAnimation 36s linear infinite 0s; 
+    background-position: 50% 50%;
+    background-repeat: none; 
+    background-size: cover;
+    color: transparent;
     height: 100%;
+    left: 0px;
+    opacity: 0;
     position: absolute;
     top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
+    width: 100%;
     z-index: 0;
-    animation: imageAnimation 36s linear infinite 0s; 
 }
 
 .cb-slideshow li:nth-child(1) span { 
@@ -67,7 +67,7 @@
 }
 
 
-.no-cssanimations .cb-slideshow li span{
+.no-cssanimations .cb-slideshow li span {
 	opacity: 1;
 }
 
@@ -78,41 +78,42 @@
     .cb-slideshow li div h3 { font-size: 80px }
 }
 
-.container{
+.container {
 	position: relative;
 	text-align: center;
 }
 
-.container > header{
-	padding: 30px 30px 10px 20px;
-	margin: 0px 20px 10px 20px;
-	position: relative;
-	display: block;
+.container > header {
+    display: block;
+    margin: 0px 20px 10px 20px;
+    text-align: left; 
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    text-align: left;
-}
-.container > header h1{
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-size: 17vw;
-	line-height: 35px;
+    padding: 30px 30px 10px 20px;
 	position: relative;
-	font-weight: strong;
-	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    padding: 0px 0px 0px 0px;
-    margin-bottom: 8%;
-    animation: titleAnimation 36s; 
-    animation-fill-mode: forwards;
 }
 
-.container > header h2, p.info{
+.container > header h1 {
+    animation: titleAnimation 36s; 
+    animation-fill-mode: forwards;
+    color: #fff;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17vw;
+    font-weight: strong;
+    line-height: 35px;
+    margin-bottom: 8%;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);    
+}
+
+.container > header h2, p.info {
+    animation: titleAnimation 36s; 
+    animation-fill-mode: forwards;
+    color: #f8f8f8;
 	font-size: 3vw;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: lighter;
-    color: #f8f8f8;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-    animation: titleAnimation 36s; 
-    animation-fill-mode: forwards;
 }
 
 @keyframes titleAnimation { 
@@ -121,7 +122,6 @@
     17% { opacity: 1 }
     19% { opacity: 1 }
     100% { opacity: 1;}
-    
 }
 
 /* Media Queries */
@@ -130,9 +130,9 @@
 		text-align: center;
 	}
 	p.codrops-demos {
+        left: auto;
 		position: relative;
 		top: auto;
-		left: auto;
 	}
 }
 
@@ -140,46 +140,46 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+    justify-content: center; 
     height: 100%;
     margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
-.container-btn{
+.container-btn {
     align-items: center;
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFF;
-    padding:  40px 0px;
-    width: 240px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    padding:  40px 0px;
+    text-align: center;
+    width: 240px;
 }
 
 p {
-    text-align: left;
     color: #444;
-    letter-spacing: 0.05em;
     font-size: 0.8em;
+    letter-spacing: 0.05em;
     margin: 0 0 2em;
+    text-align: left;
 }
 
 
 .btn {
-    letter-spacing: 0.1em;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 400;
+    letter-spacing: 0.1em;
     line-height: 45px;
     max-width: 160px;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
     width: 100%;
-    border-radius: 12px;
 }
 .btn:hover {
     text-decoration: none;
@@ -187,17 +187,17 @@ p {
 
 /*btn_background*/
 .effect01 {
-    color: black;
+    background-color: #fff;
     border: 4px solid #fff;
     box-shadow:0px 0px 0px 1px #fff inset;
-    background-color: #fff;
+    color: black;
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease-in-out;
 }
 .effect01:hover {
-    border: 4px solid #3B5283;
     background-color: #3B5283;
+    border: 4px solid #3B5283;
     box-shadow:0px 0px 0px 4px #3B5283 inset;
 }
 
@@ -206,9 +206,9 @@ p {
     transition: all 0.2s ease-out;
     z-index: 2;
 }
-.effect01:hover span{
-    letter-spacing: 0.13em;
+.effect01:hover span{    
     color: #eee;
+    letter-spacing: 0.13em;
 }
 
 /*highlight*/
@@ -230,8 +230,8 @@ p {
 .effect01:hover:after {
     background: #3B5283;
     border: 20px solid #fff;
-    opacity: 0;
     left: 120%;
+    opacity: 0;
     -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
 }
