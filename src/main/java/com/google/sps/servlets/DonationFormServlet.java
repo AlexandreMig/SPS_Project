@@ -23,5 +23,8 @@ public class DonationFormServlet extends HttpServlet {
     // Print form value to server logs
       System.out.println(name + "'s location is" + location + ". They would like to donate " + item + " and their phone number is " + number +".");
 
+    // Redirect them to home page once form is submitted
+      response.sendRedirect("/home_page.html");
+
     }
 }
