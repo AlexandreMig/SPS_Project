@@ -35,8 +35,6 @@ public class DonationFormServlet extends HttpServlet {
       String location = request.getParameter("location");
       String item = request.getParameter("item");
       String number = request.getParameter("number");
-
-      String text = request.getParameter("listing");
     
       Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
       KeyFactory keyFactory = datastore.newKeyFactory().setKind("Listing");

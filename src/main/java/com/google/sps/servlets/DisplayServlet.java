@@ -7,6 +7,7 @@ import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.StructuredQuery.OrderBy;
 import com.google.cloud.datastore.KeyFactory;
+import com.google.sps.data.Task;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,8 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.html.HTML.Tag;
 
-@WebServlet("/input")
-public class Input extends HttpServlet {
+@WebServlet("/DisplayServlet")
+public class DisplayServlet extends HttpServlet {
     
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
