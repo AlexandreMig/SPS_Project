@@ -7,7 +7,7 @@ import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.StructuredQuery.OrderBy;
 import com.google.cloud.datastore.KeyFactory;
-import com.google.sps.data.Task;
+import com.google.sps.data.Listing;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.html.HTML.Tag;
 
-@WebServlet("/DisplayServlet")
+@WebServlet("/display-servlet")
 public class DisplayServlet extends HttpServlet {
     
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -30,7 +30,7 @@ public class DisplayServlet extends HttpServlet {
     .build();
     QueryResults<Entity> results = datastore.run(query);
 
-    List<Task> lists = new ArrayList<>();
+    List<Listing> lists = new ArrayList<>();
     while (results.hasNext()) {
       Entity entity = results.next();
 
@@ -39,7 +39,7 @@ public class DisplayServlet extends HttpServlet {
       String item = entity.getString("item");
       long number = entity.getLong("number");
 
-      Task list = new Task(name, location, item, number);
+      Listing list = new Listing(name, location, item, number);
       lists.add(list);
     }
 
