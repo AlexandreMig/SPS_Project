@@ -48,5 +48,4 @@ public class DonationFormServlet extends HttpServlet {
 
     response.sendRedirect("/index.html");
   }
-
 }

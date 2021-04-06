@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+.textbox {
+    height: 55px;
+    resize: none;
+    text-align: center;
+    width: 250px;
+}
