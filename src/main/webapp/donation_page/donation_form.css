@@ -1,8 +1,15 @@
-body {
+.body {
+    background-color: lightpink;
+    text-align: center;
+}
+
+.textstyling {
+    margin: 25px;
     text-align: center;
 }
 
 .textbox {
+    border-color: black;
     height: 55px;
     resize: none;
     text-align: center;
