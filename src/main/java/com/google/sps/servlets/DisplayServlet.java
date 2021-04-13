@@ -35,16 +35,16 @@ public class DisplayServlet extends HttpServlet {
       Entity entity = results.next();
 
       String name = entity.getString("name");
-      long location = entity.getLong("location");
+      String location = entity.getString("location");
       String item = entity.getString("item");
-      long number = entity.getLong("number");
+      String number = entity.getString("number");
 
       Listing list = new Listing(name, location, item, number);
       lists.add(list);
     }
 
     Gson gson = new Gson();
-
+    
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(lists));
   }

@@ -3,14 +3,15 @@ package com.google.sps.data;
 public final class Listing {
 
   private final String name;
-  private final long location;
+  private final String location;
   private final String item;
-  private final long number;
+  private final String number;
 
-  public Listing(String name, long location, String item, long number) {
+  public Listing(String name, String location, String item, String number) {
     this.name = name;
     this.location = location;
     this.item = item;
     this.number = number;
   }
+
 }
