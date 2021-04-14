@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Food</title>
+    <title>General</title>
     <link rel="stylesheet" href="cards.css">
     <script src="script.js"></script>
   </head>
-  <body>
-    <div class="listing-container">
+  <body onload="getDonations('General')">
+    <div class="card-container">
       <h3 class="title">General Donations</h3>
 
       <div class="listing">
@@ -15,18 +15,15 @@
         </div>
 
         <div class="listing-right">
-          <h3 class="listing-title">Kids toys!</h3>
 
-          <p id="general"> 
-          </p>
-
-          <div class="listing-chat">
-              <button onclick="getDonations()">Chat</button>
-          </div>
+          <div id="result"></div>
           
         </div>
       </div>
+      
     </div>
-
+   
   </body>
 </html>
+
+

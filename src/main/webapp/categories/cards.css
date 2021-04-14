@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.listing-container h3.title {
+h3.title {
   border-bottom: 1px solid black;
   font-size: 40px;
   text-align: center;
@@ -51,4 +51,78 @@
   margin: 24px 0;
   padding: 8px;
   width: 100px;
+}
+
+li {
+  font-family: verdana;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+}
+
+
+.card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.card h6 {
+	opacity: 0.6;
+	margin: 0;
+    letter-spacing: 1px;
+    font-size: 1.6em;
+}
+
+.card h2 {
+	letter-spacing: 1px;
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+.card-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.card-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
 }
