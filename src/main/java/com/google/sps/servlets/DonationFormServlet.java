@@ -46,6 +46,6 @@ public class DonationFormServlet extends HttpServlet {
         .build();
       datastore.put(listingEntity);
 
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/home_page.html");
   }
 }

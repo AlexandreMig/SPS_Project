@@ -15,3 +15,9 @@
     text-align: center;
     width: 250px;
 }
+
+select {
+    resize: none;
+    text-align: center;
+    width: 250px;
+}
